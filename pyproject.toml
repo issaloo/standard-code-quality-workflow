@@ -1,0 +1,44 @@
+[project]
+name = "standard-code-quality-workflow"
+version = "0.0.1"
+description = "Current standardized code quality workflow for Python with example file."
+authors = [
+    { name = "Issac Loo", email = "issaloo@umich.edu" },
+]
+
+requires-python = ">=3.7.7,<3.11"
+license = { text = "All Rights Reserved" }
+dependencies = [
+    "pandas>=1.5.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "ruff>=0.0.270",
+    "black>=23.3.0",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.ruff]
+line-length = 120
+select = [
+    "B",   # flake8-bugbear
+    "C",   # mccabe complexity
+    "E",   # Error
+    "F",   # pyflakes
+    "W",   # Warnings
+    "I",   # isort
+    "PD",  # pandas-vet https://beta.ruff.rs/docs/rules/#pandas-vet-pd
+    "D",   # pydocstyle https://beta.ruff.rs/docs/rules/#pydocstyle-d
+]
+ignore = [
+    "E501", # line-too-long (handled by black)
+    "B905", # zip-without-explicit-strict
+]
+
+[tool.black]
+line-length = 120
