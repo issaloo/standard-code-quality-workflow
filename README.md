@@ -43,6 +43,7 @@ pip install .
 
 Now you should be able to use the `cz` command line tool to structure git messages.
 
+hello
 
 6. Set Up Lintin and Autoformatting
 
