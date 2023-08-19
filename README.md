@@ -20,22 +20,21 @@ python -m venv .venv
 ```
 :memo: **Note:** Virtual environment will use the same python version as the system
 
-3. Activate the virtual environment 
+3. Activate the virtual environment
 ```shell
 source .venv/bin/activate
 ```
-:memo: **Note:** To deactivate the virtual environment, run
+(Optional) Deactivate the virtual environment
 ```shell
 deactivate
 ```
-
 
 4. Install general & development packages
 ```shell
 pip install '.[dev]'
 ```
 
-**If you only want to install the general packages**, run
+(Optional) Install only the general packages
 ```shell
 pip install .
 ```
