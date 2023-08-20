@@ -50,16 +50,15 @@ pre-commit install --hook-type commit-msg
 ### Test It Out
 
 **Check if `Commitizen` is working**
-
-:mag_right: Try using `cz commit` or `cz c` in command line
-:white_check_mark: You should get structured commits
+- :mag_right: Try using `cz commit` or `cz c` in command line
+- :white_check_mark: You should get structured commits
 
 > :information_source:  Ctrl-C to exit commit template
 
 **Check if `gitlint` is working**
-:mag_right: Write a bad commit (e.g., `git commit -m 'bad commit'` in command line
-:white_check_mark: You should get a question on whether to continue the commit.
+- :mag_right: Write a bad commit (e.g., `git commit -m 'bad commit'` in command line
+- :white_check_mark: You should get a question on whether to continue the commit.
 
 **Check if `pre-commit` is working**
-:mag_right: Change test/main.py lightly (e.g., adding a space), run `git add test/main.py`, run `cz commit`
-:white_check_mark: You should get automatic fixes to the main.py file and some errors
+- :mag_right: Change test/main.py lightly (e.g., adding a space), run `git add test/main.py`, run `cz commit`
+- :white_check_mark: You should get automatic fixes to the main.py file and some errors
