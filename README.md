@@ -33,17 +33,22 @@ deactivate
 ```shell
 pip install '.[dev]'
 ```
+:memo: **Note:** This will install packages ``pre-commit`` and ``commitizen``
 
 (Optional) Install only the general packages
 ```shell
 pip install .
 ```
 
-5. Set Up Templated Git Commits
+### Set Up Standardized Version Control
 
-Now you should be able to use the `cz` command line tool to structure git messages.
+1. Install git hook scripts
+```shell
+pre-commit install
+```
+
+Now you should be able to use the `cz commit` command line tool to structure git messages.
 
 hello
 
 6. Set Up Lintin and Autoformatting
-
