@@ -42,14 +42,9 @@ pip install .
 
 ### Set Up Standardized Version Control
 
-1. Automate scripts (i.e., linting, formatting) at commit with pre-commit
+Automate scripts (i.e., linting, formatting) and enforce template at commit with pre-commit
 ```shell
-pre-commit install
-```
-
-2. Enforce commit message template at commit with gitlint
-```shell
-gitlint install-hook
+pre-commit install --hook-type commit-msg
 ```
 
 ### Test It Out
