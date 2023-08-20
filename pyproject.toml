@@ -15,6 +15,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "commitizen==3.3.0",
+    "gitlint>=0.19.1",
     "pre-commit>=3.3.3"
 ]
 
