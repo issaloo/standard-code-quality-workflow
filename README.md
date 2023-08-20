@@ -18,8 +18,7 @@ cd standard-code-quality-workflow
 ```shell
 python -m venv .venv
 ```
-[!IMPORTANT]
-Virtual environment will use the same python version as the system
+> :information_source: Virtual environment will use the same python version as the system
 
 3. Activate the virtual environment
 ```shell
@@ -34,8 +33,7 @@ deactivate
 ```shell
 pip install '.[dev]'
 ```
-[!NOTE]
-This will install packages [pre-commit](https://pre-commit.com/), [commitizen](https://commitizen-tools.github.io/commitizen/), and [gitlint](https://jorisroovers.com/gitlint/latest/)
+> :information_source: This will install packages [pre-commit](https://pre-commit.com/), [commitizen](https://commitizen-tools.github.io/commitizen/), and [gitlint](https://jorisroovers.com/gitlint/latest/)
 
 (Optional) Install only the general packages
 ```shell
@@ -44,14 +42,9 @@ pip install .
 
 ### Set Up Standardized Version Control
 
-1. Automate scripts (i.e., linting, formatting) at commit with pre-commit
+Automate scripts (i.e., linting, formatting) and enforce template at commit with pre-commit
 ```shell
-pre-commit install
-```
-
-2. Enforce commit message template at commit with gitlint
-```shell
-gitlint install
+pre-commit install --hook-type commit-msg
 ```
 
 ### Test It Out
@@ -61,8 +54,7 @@ gitlint install
 :mag_right: Try using `cz commit` or `cz c` in command line
 :white_check_mark: You should get structured commits
 
-[!NOTE]
-Ctrl-C to exit commit template
+> :information_source:  Ctrl-C to exit commit template
 
 **Check if `gitlint` is working**
 :mag_right: Write a bad commit (e.g., `git commit -m 'bad commit'` in command line
