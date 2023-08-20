@@ -1,4 +1,4 @@
-# Standard Code Quality Workflow
+# Standard Code Quality Workflow (Python)
 
 ## Contributing
 
@@ -18,7 +18,8 @@ cd standard-code-quality-workflow
 ```shell
 python -m venv .venv
 ```
-:memo: **Note:** Virtual environment will use the same python version as the system
+[!IMPORTANT]
+Virtual environment will use the same python version as the system
 
 3. Activate the virtual environment
 ```shell
@@ -33,7 +34,8 @@ deactivate
 ```shell
 pip install '.[dev]'
 ```
-:memo: **Note:** This will install packages ``pre-commit`` (lint/format before commit), ``commitizen`` (automate template at commit) , and ``gitlint`` (enforce template at commit)
+[!NOTE]
+This will install packages [pre-commit](https://pre-commit.com/), [commitizen](https://commitizen-tools.github.io/commitizen/), and [gitlint](https://jorisroovers.com/gitlint/latest/)
 
 (Optional) Install only the general packages
 ```shell
@@ -42,16 +44,30 @@ pip install .
 
 ### Set Up Standardized Version Control
 
-1. Install pre-commit git hook scripts
+1. Automate scripts (i.e., linting, formatting) at commit with pre-commit
 ```shell
 pre-commit install
 ```
 
-2. Install 
+2. Enforce commit message template at commit with gitlint
+```shell
+gitlint install
+```
 
-Now you should be able to use the `cz commit` command line tool to structure git messages.
+### Test It Out
 
-hello
+**Check if `Commitizen` is working**
 
-6. Set Up Lintin and Autoformatting
+:mag_right: Try using `cz commit` or `cz c` in command line
+:white_check_mark: You should get structured commits
 
+[!NOTE]
+Ctrl-C to exit commit template
+
+**Check if `gitlint` is working**
+:mag_right: Write a bad commit (e.g., `git commit -m 'bad commit'` in command line
+:white_check_mark: You should get a question on whether to continue the commit.
+
+**Check if `pre-commit` is working**
+:mag_right: Change test/main.py lightly (e.g., adding a space), run `git add test/main.py`, run `cz commit`
+:white_check_mark: You should get automatic fixes to the main.py file and some errors
