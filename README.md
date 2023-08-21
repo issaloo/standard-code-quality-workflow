@@ -44,7 +44,7 @@ pip install .
 
 Automate scripts (i.e., linting, formatting) and enforce template at commit with pre-commit
 ```shell
-pre-commit install --hook-type commit-msg
+pre-commit install
 ```
 
 ### Test It Out
