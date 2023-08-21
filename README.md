@@ -50,7 +50,7 @@ pre-commit install --hook-type commit-msg
 ### Test It Out
 
 **Check if `commitizen` is working**
-- :mag_right: Try using `cz commit` or `cz c` in command line
+- :mag_right: Try using `git cz c` (or `cz c`) in command line
 - :white_check_mark: You should get structured commits
 
 > :information_source:  Ctrl-C to exit commit template
