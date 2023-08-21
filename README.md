@@ -47,6 +47,11 @@ Automate scripts (i.e., linting, formatting) and enforce template at commit with
 pre-commit install --hook-type commit-msg
 ```
 
+(Optional) If you already have a .git/hooks/commit-msg, uninstall by running
+```shell
+pre-commit uninstall --hook-type commit-msg
+```
+
 ### Test It Out
 
 **Check if `commitizen` is working**
@@ -62,4 +67,3 @@ pre-commit install --hook-type commit-msg
 **Check if `pre-commit` is working**
 - :mag_right: Change test/main.py lightly (e.g., adding a space), run `git add test/main.py`, run `cz commit`
 - :white_check_mark: You should get automatic fixes to the main.py file and some errors
-

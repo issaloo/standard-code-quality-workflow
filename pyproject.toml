@@ -14,7 +14,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "commitizen==3.3.0",
+    "commitizen>=3.6.0",
     "pre-commit>=3.3.3"
 ]
 
@@ -37,9 +37,9 @@ select = [
 ignore = [
     "E501", # line-too-long (handled by black)
     "B905", # zip-without-explicit-strict
-    "D211",
-    "D212",
-    "D213",
+    "D211", # blank-line-before-class
+    "D212", # multi-line-summary-first-line
+    "D213", # multi-line-summary-second-line
 ]
 
 [tool.black]
