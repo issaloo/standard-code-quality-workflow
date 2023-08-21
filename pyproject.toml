@@ -37,6 +37,9 @@ select = [
 ignore = [
     "E501", # line-too-long (handled by black)
     "B905", # zip-without-explicit-strict
+    "D211",
+    "D212",
+    "D213",
 ]
 
 [tool.black]

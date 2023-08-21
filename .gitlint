@@ -1,3 +1,3 @@
 [general]
 # Ignore certain rules (comma-separated list), you can reference them by their id or by their full name
-ignore=body-is-missing
+ignore=[D211, D212, D213]
