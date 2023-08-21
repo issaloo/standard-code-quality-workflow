@@ -62,3 +62,4 @@ pre-commit install --hook-type commit-msg
 **Check if `pre-commit` is working**
 - :mag_right: Change test/main.py lightly (e.g., adding a space), run `git add test/main.py`, run `cz commit`
 - :white_check_mark: You should get automatic fixes to the main.py file and some errors
+
