@@ -14,8 +14,11 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "cookiecutter>=2.1.1",
+    "pytest>=7.3.1",
     "commitizen>=3.6.0",
-    "pre-commit>=3.3.3"
+    "pre-commit>=3.3.3",
+    "gitlint>=0.19.1"
 ]
 
 [build-system]
@@ -23,7 +26,6 @@ requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
 [tool.ruff]
-line-length = 120
 select = [
     "B",   # flake8-bugbear
     "C",   # mccabe complexity
@@ -35,11 +37,16 @@ select = [
     "D",   # pydocstyle https://beta.ruff.rs/docs/rules/#pydocstyle-d
 ]
 ignore = [
-    "E501", # line-too-long (handled by black)
+    "B008", # function-call-in-default-argument
     "B905", # zip-without-explicit-strict
+    "C901", # complex-structure
+    "D100", # undocumented-public-module
+    "D104", # undocumented-public-package
     "D211", # blank-line-before-class
     "D212", # multi-line-summary-first-line
     "D213", # multi-line-summary-second-line
+    "D417", # undocumented-param
+    "E501", # line-too-long (handled by black)
 ]
 
 [tool.black]
