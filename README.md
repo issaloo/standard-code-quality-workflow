@@ -42,28 +42,48 @@ pip install .
 
 ### Set Up Standardized Version Control
 
-Automate scripts (i.e., linting, formatting) and enforce template at commit with pre-commit
-```shell
-pre-commit install --hook-type commit-msg
-```
-
-(Optional) If you already have a .git/hooks/commit-msg, uninstall by running
-```shell
-pre-commit uninstall --hook-type commit-msg
-```
+1. Automate scripts (i.e., linting and autoformatting)
+   ```shell
+   pre-commit install
+   ```
+   
+2. Enforce template at commit with pre-commit
+   ```shell
+   gitlint install-hook
+   ```
 
 ### Test It Out
 
-**Check if `commitizen` is working**
-- :mag_right: Try using `git cz c` (or `cz c`) in command line
-- :white_check_mark: You should get structured commits
+1. **Check if `commitizen` is working**
+   - :mag_right: Try using commitizen in command line 
+      1. Add files to staging
+      2. Run commitizen
+         ```shell
+         git cz c
+         ```
+         Or, if possible
+         ```shell
+         cz c
+         ```
+   - :white_check_mark: You should get structured commits
 
-> :information_source:  Ctrl-C to exit commit template
+2. **Check if `gitlint` is working**
+   - :mag_right: Try writing a bad commit
+     1. Add files to staging
+     2. Write a bad commit (e.g., `git commit -m 'WIP: baD commit'`)
+   - :white_check_mark: You should get a question on whether to continue the commit.
 
-**Check if `gitlint` is working**
-- :mag_right: Write a bad commit (e.g., `git commit -m 'bad commit'` in command line
-- :white_check_mark: You should get a question on whether to continue the commit.
+3. **Check if `pre-commit` is working**
+   - :mag_right: 
+     1. Add files to staging, where at least one python file is not formatted well
+     2. Run commitizen
+         ```shell
+         git cz c
+         ```
+         Or, if possible
+         ```shell
+         cz c
+         ```
+   - :white_check_mark: You should get automatic fixes to poorly formatted python files with some errors
 
-**Check if `pre-commit` is working**
-- :mag_right: Change test/main.py lightly (e.g., adding a space), run `git add test/main.py`, run `cz commit`
-- :white_check_mark: You should get automatic fixes to the main.py file and some errors
+   > :information_source:  Ctrl+C to exit commit template
