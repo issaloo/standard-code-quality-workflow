@@ -6,3 +6,6 @@ import os
 
 
 a =  "hello"
+
+def func() -> str:
+    return 5 
