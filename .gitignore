@@ -10,6 +10,10 @@ venv/
 # PyCharm
 .idea/
 
+# pdm
+pdm.lock
+.pdm-python
+
 # ruff
 .ruff_cache
 
