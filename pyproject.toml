@@ -6,7 +6,7 @@ authors = [
     { name = "Issac Loo", email = "issaloo@umich.edu" },
 ]
 
-requires-python = ">=3.7.7,<3.11"
+requires-python = ">=3.9,<3.11"
 license = { text = "All Rights Reserved" }
 dependencies = [
     "pandas>=1.5.3",
@@ -18,7 +18,9 @@ dev = [
     "pytest>=7.3.1",
     "commitizen>=3.6.0",
     "pre-commit>=3.3.3",
-    "gitlint>=0.19.1"
+    "gitlint>=0.19.1",
+    "scalene>=1.5.26",
+    "pandera>=0.16.0"
 ]
 
 [build-system]
