@@ -14,27 +14,31 @@ git clone git@github.com:issaloo/standard-code-quality-workflow.git
 cd standard-code-quality-workflow
 ```
 
-2. Activate the virtual environment
+2. Install pdm globally
 ```shell
-python -m venv .venv
-source .venv/bin/activate
+pip install pdm
+```
+
+3. Install general & development packages with pdm
+```shell
+pdm install --dev
+```
+> :information_source: This will install packages [pre-commit](https://pre-commit.com/), [commitizen](https://commitizen-tools.github.io/commitizen/), and [gitlint](https://jorisroovers.com/gitlint/latest/)
+
+(Optional) Install only the general packages
+```shell
+pdm install
+```
+
+3. Activate the virtual environment
+```shell
+eval $(pdm venv activate)
 ```
 > :information_source: Virtual environment will use the same python version as the system
 
 (Optional) Deactivate the virtual environment
 ```shell
 deactivate
-```
-
-3. Install general & development packages with pip
-```shell
-pip install '.[dev]'
-```
-> :information_source: This will install packages [pre-commit](https://pre-commit.com/), [commitizen](https://commitizen-tools.github.io/commitizen/), and [gitlint](https://jorisroovers.com/gitlint/latest/)
-
-(Optional) Install only the general packages
-```shell
-pip install .
 ```
 
 ### Set Up Standardized Version Control
